@@ -27,7 +27,7 @@
 
 ;;; OS settings
 (pcase system-type
-  ('darwin (set-frame-font "menlo 12"))
+  ('darwin (set-frame-font "menlo 10"))
   ('windows-nt (set-frame-font "consolas 8")))
 
 ;;; Modes
