@@ -9,6 +9,7 @@
 (setq disabled-command-function nil)
 (setq ring-bell-function 'ignore)
 (set-language-environment "UTF-8")
+(prefer-coding-system 'utf-8)
 
 ;; Disable backup and lockfiles (annoying)
 (setq make-backup-files nil)
