@@ -34,6 +34,8 @@
 ;;; Modes
 (show-paren-mode t)
 (column-number-mode t)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ;;; Hooks
 (add-hook 'org-mode-hook 'auto-fill-mode)
