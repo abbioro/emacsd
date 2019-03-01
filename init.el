@@ -8,6 +8,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq disabled-command-function nil)
 (setq ring-bell-function 'ignore)
+(setq confirm-kill-emacs 'yes-or-no-p)
 (set-language-environment "UTF-8")
 (prefer-coding-system 'utf-8)
 
