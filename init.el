@@ -28,14 +28,15 @@
 
 ;;; OS settings
 (pcase system-type
-  ('darwin (set-frame-font "menlo 10"))
-  ('windows-nt (set-frame-font "consolas 8")))
+  ('darwin (set-face-attribute 'default nil :font "menlo 10"))
+  ('windows-nt (set-face-attribute 'default nil :font "consolas 8")))
 
 ;;; Modes
 (show-paren-mode t)
 (column-number-mode t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(desktop-save-mode t)
 
 ;;; Hooks
 (add-hook 'org-mode-hook 'auto-fill-mode)
