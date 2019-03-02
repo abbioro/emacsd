@@ -89,3 +89,10 @@
 (setq wdired-allow-to-change-permissions t)
 (setq dired-recursive-deletes 'always)
 (setq dired-recursive-copies 'always)
+
+;; Ediff
+(require 'ediff)
+;; Don't open a new frame for ediff (annoying)
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+;; Put files side by side
+(setq ediff-split-window-function (quote split-window-horizontally))
