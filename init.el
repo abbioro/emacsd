@@ -37,8 +37,10 @@
 
 ;;; OS settings
 (pcase system-type
-  ('darwin (set-face-attribute 'default nil :font "menlo 10"))
-  ('windows-nt (set-face-attribute 'default nil :font "consolas 8")))
+  ('darwin
+   (add-to-list 'default-frame-alist '(font . "menlo 10")))
+  ('windows-nt
+   (add-to-list 'default-frame-alist '(font . "consolas 8"))))
 
 ;;; Modes
 (show-paren-mode t)
