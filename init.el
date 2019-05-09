@@ -104,3 +104,7 @@
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 ;; Put files side by side
 (setq ediff-split-window-function (quote split-window-horizontally))
+
+;; Org
+(require 'org)
+(setq org-archive-location "::* Archived")
