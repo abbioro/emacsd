@@ -12,6 +12,14 @@
 (set-language-environment "UTF-8")
 (prefer-coding-system 'utf-8)
 
+(setq org-fontify-whole-heading-line t)
+(load-theme 'leuven t)
+
+(when (eq system-type 'darwin)
+  ;; Configure titlebar to match theme
+  (add-to-list 'default-frame-alist '(ns-transparent-titlebar . nil))
+  (add-to-list 'default-frame-alist '(ns-appearance . light)))
+
 ;; Disable backup and lockfiles (annoying)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
