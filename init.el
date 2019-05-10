@@ -110,3 +110,8 @@
 ;; Org
 (require 'org)
 (setq org-archive-location "::* Archived")
+(setq org-catch-invisible-edits 'error)
+(setq org-cycle-separator-lines 0)
+(setq org-adapt-indentation nil)
+(setq org-hide-emphasis-markers t)
+(setq org-edit-src-content-indentation 0)
