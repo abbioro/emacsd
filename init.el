@@ -48,6 +48,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (desktop-save-mode t)
+(delete-selection-mode t)
 
 ;;; Hooks
 (add-hook 'org-mode-hook 'auto-fill-mode)
@@ -57,6 +58,7 @@
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-x C-j") 'dired-jump)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-c w") 'abi/org-copy-src-block)
 
 ;; PTT key
 (global-unset-key (kbd "<f2> <f2>"))
@@ -115,3 +117,12 @@
 (setq org-adapt-indentation nil)
 (setq org-hide-emphasis-markers t)
 (setq org-edit-src-content-indentation 0)
+
+;;; Functions
+
+(defun abi/org-copy-src-block ()
+  (interactive)
+  (org-edit-src-code)
+  (kill-ring-save (point-min) (point-max))
+  (org-edit-src-abort)
+  (message "Copied source block to kill-ring!"))
