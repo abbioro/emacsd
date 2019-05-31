@@ -9,6 +9,7 @@
 (setq disabled-command-function nil)
 (setq ring-bell-function 'ignore)
 (setq confirm-kill-emacs 'yes-or-no-p)
+(setq-default frame-title-format '("GNU Emacs"))
 (set-language-environment "UTF-8")
 (prefer-coding-system 'utf-8)
 
