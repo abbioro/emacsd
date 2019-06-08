@@ -16,6 +16,11 @@
 (setq org-fontify-whole-heading-line t)
 (load-theme 'leuven t)
 
+;; Fix mouse scrolling by setting a smaller step amount and disabling
+;; acceleration
+(setq mouse-wheel-scroll-amount '(3 ((shift) . 15) ((control) . nil)))
+(setq mouse-wheel-progressive-speed nil)
+
 (when (eq system-type 'darwin)
   ;; Configure titlebar to match theme
   (add-to-list 'default-frame-alist '(ns-transparent-titlebar . nil))
