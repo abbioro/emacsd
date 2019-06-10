@@ -56,7 +56,6 @@
 (setq desktop-save t)
 (setq desktop-dirname user-emacs-directory)
 (setq desktop-load-locked-desktop t)    ; don't ask
-(setq org-startup-folded nil)           ; just start unfolded
 (setq desktop-restore-frames nil)       ; don't try
 (desktop-save-mode t)
 
