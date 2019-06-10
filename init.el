@@ -50,8 +50,15 @@
 (column-number-mode t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-(desktop-save-mode t)
 (delete-selection-mode t)
+
+;; Desktop mode
+(setq desktop-save t)
+(setq desktop-dirname user-emacs-directory)
+(setq desktop-load-locked-desktop t)    ; don't ask
+(setq org-startup-folded nil)           ; just start unfolded
+(setq desktop-restore-frames nil)       ; don't try
+(desktop-save-mode t)
 
 ;;; Hooks
 (add-hook 'org-mode-hook 'auto-fill-mode)
