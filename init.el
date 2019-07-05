@@ -127,6 +127,9 @@
 (setq org-hide-emphasis-markers t)
 (setq org-edit-src-content-indentation 0)
 
+(set-face-attribute
+ 'org-verbatim nil :foreground "#0066cc" :background "#ebf1f5")
+
 ;;; Functions
 
 (defun abi/org-copy-src-block ()
